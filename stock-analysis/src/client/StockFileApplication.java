@@ -15,7 +15,7 @@ public class StockFileApplication {
 
     List<HashMap<String, Double>> dataResult =
         populateStockFileData(fr.getHeaders(), fr.readFileData());
-    StockFileData fileData = new StockFileData();
+    StockFileData fileData = new StockFileData() ;
     fileData.addData(dataResult);
     fileData.printData();
     System.out.println(dataResult.size());
