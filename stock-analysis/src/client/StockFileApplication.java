@@ -11,7 +11,7 @@ import java.util.List;
 public class StockFileApplication {
 
   public static void main(String args[]) throws IOException {
-    StockFileReader fr = new StockFileReader("table.csv");
+    StockFileReader fr = new StockFileReader("D:\\git\\stock-Analysis\\stock-analysis\\src\\client\\table.csv");
 
     List<HashMap<String, Double>> dataResult =
         populateStockFileData(fr.getHeaders(), fr.readFileData());
@@ -42,8 +42,6 @@ public class StockFileApplication {
       dataResult.add(stockValues);
     }
     return dataResult;
-    // Alternative Code using foreach and lambdas
-    // return populatedList(headers, lines);
   }
 
   private static List<HashMap<String, Double>> populatedList(
